@@ -15,6 +15,16 @@ public:
     set<string> roleRcNameList;// 资源名称清单
 };
 
+map<string, RoleInfo> roles;// 角色
+
+// 用户组信息
+class GroupInfo {
+public:
+    set<string> roleList;// 所属的角色
+};
+
+map<string, GroupInfo> groups;// 用户组
+
 // 用户信息
 class UserInfo {
 public:
@@ -54,15 +64,7 @@ public:
     }
 };
 
-// 用户组信息
-class GroupInfo {
-public:
-    set<string> roleList;// 所属的角色
-};
-
-map<string, RoleInfo> roles;  // 角色
-map<string, UserInfo> users;  // 用户
-map<string, GroupInfo> groups;// 用户组
+map<string, UserInfo> users;// 用户
 
 int main() {
     // freopen("./in.txt", "r", stdin);
